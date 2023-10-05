@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register</title>
+        <meta charset="utf-8">
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1 id="searchin"></h1>
+    </body>
+    <script>
+        let search = document.getElementById("searchin");
+        var values = ["Searching", "Searching.", "Searching..", "Searching..."];
+        let counter = 0;
+        setInterval(() => {
+            search.innerText = values[counter];
+            counter++;
+            if (counter === 4) counter = 0;
+        }, 500);
+    </script>
+</html>

@@ -1,0 +1,7 @@
+{
+    "host":"localhost",
+    "user":"mtkachov",
+    "password":"securepass",
+    "database":"cardgame",
+    "connectionLimit":10
+}

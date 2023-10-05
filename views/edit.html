@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Edit profile</title>
+        <meta charset="utf-8">
+        <link href="edit.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    </head>
+    <body>
+        <% if (messageType) {%>
+            <div id="<%= messageType %>"><%= messageText %></div>
+        <% } else { %>
+            <div id="error" style="display: none;"></div>
+        <% } %>
+        <img id="cloud" src="/cloud_5.png">
+        <img id="towers" src="/towers.png">
+        <img id="circle" src="/circle.png">
+        <div id="navbar">
+            <a href="/"><img id="logo" src="/logo.png"></a>
+            <a id="logoutLink" href="/logout"><button id="logoutButton">LOG OUT</button></a>
+        </div>
+        <div id="ChangeProfileForm">
+            <form id="form" action="/edit" method="POST" enctype="multipart/form-data">
+                <div class="row">
+                    <label for="name">Name</label>
+                    <input id="name" type="text" placeholder="Full name" name="name" value="<%= user.name %>" required>
+                </div>
+                <div class="row">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" placeholder="E-mail" name="email" value="<%= user.email %>" required>
+                </div>
+                <div class="row">
+                    <label for="avathar">Photo</label>
+                    <div id="av-wrapper">
+                        <input id="avathar" type="file" name="avathar" accept="image/*">
+                        <label for="avathar" id="avLabel"></label>
+                    </div>
+                </div>
+                <button type="submit">SAVE CHANGES</button>
+            </form>
+        </div>
+                <img id="corner2" src="/corner_2.png">
+    </body>
+</html>

@@ -1,0 +1,17 @@
+/
+    public/ //css files, js scripts in html pages
+
+    views/ //html, ejs files
+        templates/ //parts of html pages for use with ejs to render() reusable pieces of code
+        *.[html, ejs] //whole pages for display
+
+    models/ //database models 
+
+    controls/ //routers for API, other get/post/* requests
+
+    utils/ //miscelaneous JS server code
+
+    index.js //start file
+    config.json //config for db
+    package.json //npm packages
+    db.js //db connection

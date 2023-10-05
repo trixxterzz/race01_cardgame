@@ -1,0 +1,87 @@
+body{
+    background-color: rgb(48, 49, 50);
+    color: lightgrey;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input, button, .row{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1{
+    margin-left: 45.5%;
+}
+
+input, button{
+    background: rgb(48, 49, 50);
+    border: 2px solid lightgray;
+    padding: 5px;
+    border-radius: 5px;
+    display: block;
+    margin-top: 10px;
+    color: antiquewhite;
+}
+::placeholder{
+    color: rgba(250, 235, 215, 0.4);
+}
+input:focus{
+    color: antiquewhite;
+}
+
+button:hover{
+    background: lightgray;
+    color: rgb(48, 49, 50);
+}
+
+button{
+    padding: 10px;
+}
+
+.error, #error{
+    background-color: red;
+    padding: 10px;
+}
+
+.success, #success{
+    background-color: green;
+    padding: 10px;
+}
+
+#logout{
+    display: block;
+    margin-top: 10px;
+}
+
+#status{
+    margin-left: 42%;
+}
+
+.row{
+    width: 25%;
+}
+
+a{
+    -webkit-appearance: none;
+    appearance: none;
+    text-decoration: none;
+}
+
+img{
+    display: inline-block;
+    height: 250px;
+}
+
+#profile{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 20% 50% 20%;
+}
+#profile_info, #profile_photo{
+    display: inline-block;
+    width: 40%;
+    position: relative;
+}
+#edit_link{
+    align-self: flex-end;
+}

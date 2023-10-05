@@ -1,0 +1,61 @@
+<div id="enemySide">
+    <div class="cardContainer">
+        <% enemyCards.forEach((card) => {%>
+            <div class="enemyCard" id="<%- card.uniqueID %>">
+                <img src="/cardback.png" alt="card">
+            </div>
+        <% }) %>
+    </div>
+    <div class="opponent" id="<%-   enemyOpponent.uniqueID %>">
+        <img src="<%- enemyUser.avatharSrc %>" alt="" srcset="">
+        <p>Name: <%- enemyUser.name %></p>
+        <p>HP: <%- enemyOpponent.hp %></p>
+        <p>Mana: <%- enemyOpponent.currentMana %> / <%- enemyOpponent.maxMana %></p>
+    </div>
+    
+    <div class="minionContainer">
+        <% enemyMinions.forEach((minion) => {%>
+            <div class="minion" id="<%- minion.uniqueID %>">
+                <img src="<%- minion.avatharSrc %>" alt="minion">
+                <p>Name: <%- minion.name %></p>
+                <p>HP: <%- minion.hp %></p>
+                <p>Attack: <%- minion.attack %></p>
+            </div>
+        <% }) %>
+    </div>
+</div>
+
+<button id="endTurnBtn" onclick="return api_endTurn();">End Turn</button>
+
+<div id="mySide" <% if (!isMyTurn){ %> disabled style="background-color: gray;" <%} %>>
+    <div class="minionContainer">
+        <% myMinions.forEach((minion) => {%>
+            <div class="minion <%if (!minion.active) {%> disabledMinion <%}%>" id="<%- minion.uniqueID %>" <%if (!minion.active) {%> disabled <%}%>>
+                <img src="<%- minion.avatharSrc %>" alt="minion">
+                <p>Name: <%- minion.name %></p>
+                <p>HP: <%- minion.hp %></p>
+                <p>Attack: <%- minion.attack %></p>
+            </div>
+        <% }) %>
+    </div>
+    <div class="opponent" id="<%- myOpponent.uniqueID %>">
+        <img src="<%- myUser.avatharSrc %>" alt="" srcset="">
+        <p>Name: <%- myUser.name %></p>
+        <p>HP: <%- myOpponent.hp %></p>
+        <p>Mana: <%- myOpponent.currentMana %> / <%- myOpponent.maxMana %></p>
+    </div>
+    <div class="cardContainer">
+        <% myCards.forEach((card) => {%>
+            <div class="card" id="<%- card.uniqueID %>">
+                <img src="<%- card.avatharSrc  %>" alt="card">
+                <p>Name: <%- card.name %></p>
+                <p>Cost: <%- card.cost %></p>
+                <p>HP: <%- card.hp %></p>
+                <p>Attack: <%- card.attack %></p>
+            </div>
+        <% }) %>
+    </div>
+    
+    
+
+</div>

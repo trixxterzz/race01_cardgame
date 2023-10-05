@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Main</title>
+        <meta charset="utf-8">
+        <link href="index.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    </head>
+    <body>
+        <% if (messageType) {%>
+            <div id="<%= messageType %>"><%= messageText %></div>
+        <% } else { %>
+            <div id="error" style="display: none;"></div>
+        <% } %>
+        <img id="cloud" src="/cloud_5.png">
+        <img id="towers" src="/towers.png">
+        <img id="circle" src="/circle.png">
+        <div id="navbar">
+            <a href="/"><img id="logo" src="/logo.png"></a>
+            <a id="logoutLink" href="/logout"><button id="logoutButton">LOGOUT</button></a>
+        </div>
+        
+        <div style="display: none;" id="searching"></div>
+        <div id="profile">
+            <div id="profile_photo">
+                <img id="avathar" src="<%= user.av %>">
+            </div>
+            <div id="profile_info">
+                <p id="username"><%= user.name %></p>
+                <p id="userlogin"><%= user.login %></p>
+            </div>
+            <div id="edit_info">
+                <a id="edit_link" href="/edit"><button>Edit profile</button></a>
+                <a id="change_link" href="/changepassw"><button>Change password</button></a>
+            </div>
+        </div>
+        <div id="searchButts">
+            <form id="findForm" action="/" method="post">
+                <button type="submit" id="find">PLAY</button>
+            </form>
+            <form style="display: none;" id="cancelForm" action="/cancel" method="post">
+                <button type="submit" id="find">CANCEL SEARCH</button>
+            </form> 
+        </div>
+        <img id="corner2" src="/corner_2.png">
+    </body>
+    <script>
+        let search = document.getElementById("searching");
+        var values = ["Searching", "Searching.", "Searching..", "Searching..."];
+        let findButt = document.getElementById("find");
+        let cancelButt = document.getElementById("cancel");
+        let find = document.getElementById("findForm");
+        let cancel = document.getElementById("cancelForm");
+        var inter;
+        findButt.addEventListener("click", () => {
+            search.style.display = "block";
+            let counter = 0;
+            inter = setInterval(() => {
+                search.innerText = values[counter];
+                counter++;
+                if (counter === 4) counter = 0;
+            }, 500);
+            find.style.display = "none";
+            cancel.style.display = "block";
+        });
+        cancelButt.addEventListener("click", () => {
+            search.style.display = "none";
+            clearInterval(inter);
+            find.style.display = "block";
+            cancel.style.display = "none";
+        });
+        
+    </script>
+</html>

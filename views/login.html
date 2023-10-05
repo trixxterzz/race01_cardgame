@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <meta charset="utf-8">
+        <link href="login.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    </head>
+    <body>
+        <% if (messageType) {%>
+            <div class="<%= messageType %>"><%= messageText %></div>
+        <% } else { %>
+            <div id="error" style="display: none;"></div>
+        <% } %>
+        <img id="samurai" src="/CREATIVE_SAMURAI.png">
+        <div id="logoBlock">
+            <a href="/"><img id="logo" src="/logo.png"></a>
+        </div>
+        <div id="loginBlock">
+            <p id="welcome">Welcome!</p>
+            <div id="signinto">
+                <p id="signintop">Sign in to</p>
+                <p id="creative">Creative Samurai</p>
+            </div>
+            <div id="loginForm">
+                <form id="form" action="/login" method="POST">
+                    <div id="loginRow">
+                        <label id="forLogin" for="loginInput">Username</label>
+                        <input id="loginInput" type="text" placeholder="Enter your username" name="login" required>
+                    </div>
+                    <div id="passwRow">
+                        <label id="forPassw" for="passwInput">Password</label>
+                        <input id="passwInput" type="password" placeholder="Enter your password" name="password" required>
+                    </div>
+                    <button id="logButt" type="submit">Login</button>
+                </form>
+            </div>
+            <p id="dont">Don't have an account? <a id="reglink" href="/register">Register</a></p>
+        </div>
+    </body>
+</html>

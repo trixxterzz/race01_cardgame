@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register</title>
+        <meta charset="utf-8">
+        <link href="register.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    </head>
+    <body>
+        <% if (messageType) {%>
+            <div id="<%= messageType %>"><%= messageText %></div>
+        <% } else { %>
+            <div id="error" style="display: none;"></div>
+        <% } %>
+        <img id="samurai" src="/CREATIVE_SAMURAI.png">
+        <div id="logoBlock">
+            <a href="/"><img id="logo" src="/logo.png"></a>
+        </div>
+        <div id="regForm">
+            <p id="signup">Sign up</p>
+            <form id="form" action="/register" method="POST" enctype="multipart/form-data">
+                <div class="row">
+                    <label for="login">Username</label>
+                    <input id="login" type="text" placeholder="Enter your username" name="login" required>
+                </div>
+                <div class="row">
+                    <label for="passw1">Password</label>
+                    <input id="passw1" type="password" placeholder="Enter your password" name="password" required>
+                </div>
+                <div class="row">
+                    <label for="passw2">Confirm password</label>
+                    <input id="passw2" type="password" placeholder="Confirm your password" name="passwordConfirm" required>
+                </div>
+                <div class="row">
+                    <label for="name">Name</label>
+                    <input id="name" type="text" placeholder="Enter your full name" name="name" required>
+                </div>
+                <div class="row">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" placeholder="Enter your email" name="email" required>
+                </div>
+                <div class="row">
+                    <label>Photo </label>
+                    <div id="av-wrapper">
+                        <input id="avathar" type="file" name="avathar" accept="image/*">
+                        <label for="avathar" id="avLabel">Choose file</label>
+                    </div>
+                </div>
+                <button type="submit">REGISTER</button>
+            </form>
+            <p id="already">Already have an account? <a href="/login" id="goback">Go Back</a></p>
+        </div>
+    </body>
+    <script>
+        let form = document.getElementById("form");
+        let passw1 = document.getElementById("passw1");
+        let passw2 = document.getElementById("passw2");
+        let error = document.getElementById("error");
+        let login = document.getElementById("login");
+        form.addEventListener("submit", (event) => {
+            if (passw1.value != passw2.value) {
+                event.preventDefault();
+                error.style.display = "block";
+                error.innerText = "Passwords don't match";
+                return;
+            }
+            if (login.length > 20){
+                event.preventDefault();
+                error.style.display = "block";
+                error.innerText = "Login is too long";
+                return;
+            } 
+        });
+
+        let avInp = document.getElementById("avathar");
+        let avLab = document.getElementById("avLabel");
+        avInp.addEventListener("input", () => {
+            if (avInp.value == ""){
+                avLab.innerText = "Choose file";
+            }
+            else {
+                let avArr = avInp.value.split("\\");
+                avLab.innerText = avArr[avArr.length - 1];
+            }
+        });
+    </script>
+</html>

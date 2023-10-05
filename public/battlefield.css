@@ -1,0 +1,323 @@
+#logo{
+    height: 40px;
+    width: 80px;
+    margin-top: 1.3%;
+    margin-left: 1%;
+    position: absolute;
+}
+
+body{
+    margin: 0px;
+    background: url(login_samurai.png), lightgray 50% / cover no-repeat;
+    background-color: #02020F;
+}
+
+div{
+    z-index: 10;
+    position: relative;
+}
+
+img:not(.avathar){
+    position: absolute;
+}
+
+.avathar{
+    width: 70px;
+    width: 70px;
+}
+
+#navbar{
+    z-index: 4;
+    background: #02020F;
+    width: 100%;
+    height: 80px;
+    margin-top: 0px;
+}
+
+#logoutLink{
+    margin-left: 90%;
+}
+
+#logoutButton{
+    padding: 16px 29px;
+    border-radius: 10px;
+    border: 1px solid #02020F;
+    background: #FFF;
+    color: #02020F;
+    font-family: Ubuntu;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 1%;
+}
+
+#logoutButton:hover{
+    cursor: pointer;
+    background-color: crimson;
+    color: #FFF;
+}
+
+#battlefieldContainer{
+    margin-top: 10px;
+    margin-left: 250px;
+}
+
+#enemySide, #mySide{
+    background-color: #FFF;
+    width: 1000px;
+    display: grid;
+    grid-template-rows: 50% 45%;
+}
+
+#enemySide{
+    height: 320px;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+}
+#mySide{
+    margin-top: 10px;
+    gap: 5%;
+    height: 300px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.avDiv{
+    background-color: #02020F;
+    border-radius: 16.67px;
+    padding: 15px;
+    width: 70px;
+    height: 70px;
+}
+
+.profileRow{
+    display: grid;
+    grid-template-columns: 45% 55%;
+    gap: 5%;
+}
+
+.user{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    gap: 5%;
+    margin-left: 65px;
+}
+
+#enemyProfile{
+    margin-top: 10px;
+}
+
+.nickname{
+    width: 100px;
+    text-align: center;
+    color: #000;
+    font-family: Poppins;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 2px;
+}
+
+.playerInfo{
+    color: #000;
+    font-family: Poppins;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.playerInfoCon{
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.health-bar {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 220px;
+    height: 50px;
+    padding: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    position: relative;
+}
+.bar {
+    background: #779341;
+    width: 100%;
+    height: 25px;
+    position: relative;
+    border-radius: 25px;
+    transition: width .5s linear;
+}
+.hit {
+    background: rgba(255,255,255,0.6);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 0px; 
+    transition: width .5s linear;
+}
+
+.timeSpan{
+    margin-left: 15px;
+}
+
+.cardRow{
+    margin-left: 65px;
+}
+
+.minion{
+    width: 100px;
+    height: 150px;
+    background-color: #000;
+    border-radius: 6.5px;
+    display: inline-block;
+}
+
+.card{
+    width: 80px;
+    height: 120px;
+    background-color: #000;
+    border-radius: 6.5px;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.myCard{
+    margin-top: 10px;
+}
+
+.thinMin{
+    width: 61.38px;
+    margin-left: 20px;
+    margin-top: 10px;
+    display: block;
+}
+
+.thinCard{
+    width: 49.1px;
+    margin-left: 15px;
+    margin-top: 10px;
+    display: block;
+}
+
+.minion:not(:first-child){
+    margin-left: 20px;
+}
+
+.minionInfo{
+    display: grid;
+    grid-template-columns: 45% 45%;
+    gap: 10%;
+    height: 30px;
+}
+
+.cardInfo{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    gap: 5%;
+    height: 30px;
+}
+
+.points, .stat{
+    color: #FFF;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.points{
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+.stat{
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 7px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+.charName{
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-top: 85px;
+}
+
+.charNameCard{
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-top: 67px;
+}
+
+#endTurnBtn{
+    padding: 16px 29px;
+    border-radius: 10px;
+    border: 1px solid #02020F;
+    background: #FFF;
+    color: #02020F;
+    font-family: Ubuntu;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 1%;
+    margin-left: -200px;
+}
+
+#endTurnBtn:hover{
+    cursor: pointer;
+    background-color: crimson;
+    color: white;
+}
+
+#myHealth, #enemyHealth{
+    appearance: none;
+    -webkit-appearance: none;
+    height: 30px;
+    width: 200px;
+}
+
+.explosion {
+    margin-top: -50px;
+    margin-left: 30px;
+    position: absolute;
+    background-image: url(cogti.png);
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+#endgame{
+    font-family: Poppins;
+    margin-top: 200px;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Battle!</title>
+    <meta charset="utf-8">
+    <link href="battlefield.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+</head>
+
+<body>
+    <p hidden id="endgame"></p>
+    <div id="battlefieldBody">
+        <div id="navbar">
+            <img id="logo" src="/logo.png">
+            <a id="logoutLink" href="/logout"><button id="logoutButton">LOGOUT</button></a>
+        </div>
+        <p hidden id="initGameData"><%- JSON.stringify(game) %></p>
+        <p hidden id="userData"><% if (userData != undefined) {%> <%-JSON.stringify(userData)%> <%}%></p>
+        <p id="timer" hidden></p>
+        <div id="battlefieldContainer">
+            <!-- here goes battlefieldTemplate.ejs -->
+            
+        </div>
+    </div>
+    <script src="/ejs.min.js" defer></script>
+    <script src="/battleScript.js" defer></script>
+</body>
+
+</html>

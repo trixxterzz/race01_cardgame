@@ -1,0 +1,190 @@
+#logo{
+    height: 40px;
+    width: 80px;
+    margin-top: 1.3%;
+    margin-left: 1%;
+    position: absolute;
+}
+
+body{
+    margin: 0px;
+}
+
+div{
+    z-index: 10;
+    position: relative;
+}
+
+img:not(#avathar){
+    position: absolute;
+}
+
+#navbar{
+    z-index: 4;
+    background: #02020F;
+    width: 100%;
+    height: 80px;
+    margin-top: 0px;
+}
+
+#logoutLink{
+    margin-left: 90%;
+}
+
+#logoutButton{
+    padding: 16px 29px;
+    border-radius: 10px;
+    border: 1px solid #02020F;
+    background: #FFF;
+    color: #02020F;
+    font-family: Ubuntu;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 1%;
+}
+
+#logoutButton:hover{
+    cursor: pointer;
+    background-color: crimson;
+    color: #FFF;
+}
+
+#profile{
+    width: 20.11%;
+    margin-top: 2%;
+    margin-left: 3.27%;
+}
+
+#profile_photo{
+    border-radius: 25px;
+    background: #02020F;
+    box-shadow: 0px 4px 49px 14px rgba(0, 0, 0, 0.25);
+    width: 80%;
+    padding: 10%;
+}
+
+#avathar{
+    width: 100%;
+}
+
+#profile_info{
+    width: 100%;
+}
+
+#username{
+    color: #000;
+    font-family: Poppins;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+#userlogin{
+    color: #6C6C6C;
+    font-family: Poppins;
+    font-size: 18.85px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    margin-top: 0px;
+}
+
+#edit_info{
+    width: 100%;
+    margin-left: 17%;
+}
+
+#edit_info button{
+    width: 200px;
+    padding: 12px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 6px;
+    background: #000;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 5px;
+}
+
+#edit_info button:hover{
+    cursor: pointer;
+    background-color: crimson;
+    color: #FFF;
+    border: 2px solid crimson;
+}
+
+#searchButts{
+    position: absolute;
+    width: 10%;
+    margin-left: 44%;
+    margin-top: -3.5%;
+}
+
+#searchButts button{
+    border-radius: 6px;
+    background: #A81B2D;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border: none;
+    display: flex;
+    width: 100%;
+    padding: 16px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#searchButts button:hover{
+    background-color: #02020F;
+    color: #FFF;
+    cursor: pointer;
+}
+
+#corner2{
+    margin-top: -11.5%;
+}
+
+#cloud{
+    width: 22%;
+    margin-left: 77.98%;
+    z-index: 2;
+}
+
+#towers{
+    width: 30.32%;
+    margin-left: 69.7%;
+    margin-top: 13.85%;
+    z-index: 3;
+}
+
+#circle{
+    width: 33%;
+    z-index: 1;
+    margin-left: 66.98%;
+    margin-top: 7%;
+}
+
+#success{
+    height: 50px;
+    color: white;
+    background-color: green;
+}
+
+#searching{
+    font-family: Poppins;
+}

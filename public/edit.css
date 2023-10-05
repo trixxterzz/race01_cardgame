@@ -1,0 +1,163 @@
+#logo {
+    height: 40px;
+    width: 80px;
+    margin-top: 1.3%;
+    margin-left: 1%;
+    position: absolute;
+}
+
+body {
+    margin: 0px;
+    font-family: Poppins;
+}
+
+div {
+    z-index: 10;
+    position: relative;
+}
+
+img:not(#avathar) {
+    position: absolute;
+}
+
+#navbar {
+    z-index: 4;
+    background: #02020F;
+    width: 100%;
+    height: 80px;
+    margin-top: 0px;
+}
+
+#logoutLink {
+    margin-left: 90%;
+}
+
+#logoutButton {
+    padding: 16px 29px;
+    border-radius: 10px;
+    border: 1px solid #02020F;
+    background: #FFF;
+    color: #02020F;
+    font-family: Poppins, bold;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 1%;
+}
+
+#logoutButton:hover {
+    cursor: pointer;
+    background-color: crimson;
+    color: #FFF;
+}
+
+#corner2 {
+        position: fixed;
+            bottom: 0;
+            left: 0;
+}
+
+#cloud {
+    width: 22%;
+    margin-left: 77.98%;
+    z-index: 2;
+}
+
+#towers {
+    width: 30.32%;
+    margin-left: 69.7%;
+    margin-top: 13.85%;
+    z-index: 3;
+}
+
+#circle {
+    width: 33%;
+    z-index: 1;
+    margin-left: 66.98%;
+    margin-top: 7%;
+}
+
+#ChangeProfileForm {
+  margin-left: 6%;
+    margin-top: 3%; 
+    display: flex;
+}
+
+#ChangeProfileForm label {
+    font-family: Poppins;
+    display: block;
+    margin-bottom: 3px;
+}
+
+#ChangeProfileForm input {
+    height: 40px;
+    width: 100%;
+    /* Ширина равна 100% контейнера */
+    max-width: 423px;
+    border-radius: 6px;
+    border: 0.6px solid #282828;
+    background: #FFF;
+    padding-left: 15px;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: normal;
+    margin-bottom: 15px;
+}
+
+#ChangeProfileForm input::placeholder {
+    color: #ABABAB;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+#av-wrapper:hover,
+#avLabel:hover {
+    cursor: pointer;
+}
+
+#ChangeProfileForm button:hover {
+    background: green;
+
+}
+
+    #ChangeProfileForm button {
+            background-color: black;
+            color: white;
+            font-family: Poppins, sans-serif;
+            font-size: 16px;
+            /* Устанавливаем размер шрифта */
+            font-weight: 500;
+            /* Изменяем на medium */
+            padding: 10px 20px;
+            /* Добавляем внутренний отступ кнопки */
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            
+        }
+
+.error,
+#error {
+    background-color: red;
+    padding: 10px;
+}
+
+.success,
+#success {
+    background-color: green;
+    padding: 10px;
+}
+
+#logout {
+    display: block;
+    margin-top: 10px;
+}
+
+#status {
+    margin-left: 42%;
+}

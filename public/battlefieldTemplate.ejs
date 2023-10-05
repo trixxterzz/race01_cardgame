@@ -1,0 +1,90 @@
+<div id="enemySide">
+    <div class="profileRow" id="enemyProfile">
+        <div class="user">
+            <div>
+                <div class="avDiv"><img class="avathar" src="<%- enemyUser.avatharSrc %>" id="<%- enemyOpponent.uniqueID %>"></div>
+                <p class="nickname"><%- enemyUser.name %></p>
+            </div>
+            <div class="playerInfoCon">
+                <p class="playerInfo"><span>Health:  <%- enemyOpponent.hp %></span><span class="timeSpan" id="enemyTime">Time: 30</span></p>
+                <p class="playerInfo"><span>Mana: <%- enemyOpponent.currentMana %></span></p>
+                <progress id="enemyHealth" value="<%- enemyOpponent.hp %>" max="100"></progress>
+            </div>
+        </div>
+    </div>
+    <div class="cardRow" id="enemyCards">
+        <% enemyMinions.forEach((minion) => {%>
+            <div id="<%- minion.uniqueID %>" class="minion enemyCard">
+                <img class="char thinMin" src="<%- minion.avatharSrc %>">
+                <div class="charName"><%- minion.name %></div>
+                <div class="minionInfo">
+                    <div class="cardAttack">
+                        <p class="points"><%- minion.attack %></p>
+                        <p class="stat">Attack</p>
+                    </div>
+                    <div class="cardDefense">
+                        <p class="points"><%- minion.hp %></p>
+                        <p class="stat">Defense</p>
+                    </div>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+</div>
+<button id="endTurnBtn" onclick="return api_endTurn();">End Turn</button>
+<div id="mySide" <% if (!isMyTurn){ %> disabled style="background-color: gray;" <%} %>>
+    <div class="cardRow" id="myCards">
+        
+        <% myMinions.forEach((minion) => {%>
+            <div class="minion myCard" id="<%- minion.uniqueID %>" <%if (!minion.active) {%> disabled <%}%>>
+                <img class="char thinMin" src="<%- minion.avatharSrc %>">
+                <div class="charName"><%- minion.name %></div>
+                <div class="minionInfo">
+                    <div class="cardAttack">
+                        <p class="points"><%- minion.attack %></p>
+                        <p class="stat">Attack</p>
+                    </div>
+                    <div class="cardDefense">
+                        <p class="points"><%- minion.hp %></p>
+                        <p class="stat">Defense</p>
+                    </div>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+    <div class="profileRow" id="myProfile">
+        <div class="user">
+            <div>
+                <div class="avDiv"><img class="avathar" src="<%- myUser.avatharSrc %>" id="<%- myOpponent.uniqueID %>"></div>
+                <p class="nickname"><%- myUser.name %></p>
+            </div>
+            <div class="playerInfoCon">
+                <p class="playerInfo"><span>Health:  <%- myOpponent.hp %></span><span class="timeSpan" id="myTime">Time: 30</span></p>
+                <p class="playerInfo"><span>Mana: <%- myOpponent.currentMana %></span></p>
+                <progress id="myHealth" value="<%- myOpponent.hp %>" max="100"></progress>
+            </div>
+        </div>
+        <div class="playerCards">
+            <% myCards.forEach((card) => {%>
+                <div class="myCard card" id="<%- card.uniqueID %>">
+                    <img class="char thinCard" src="<%- card.avatharSrc  %>">
+                    <div class="charNameCard"><%- card.name %></div>
+                    <div class="cardInfo">
+                        <div class="cardAttack">
+                            <p class="points"><%- card.attack %></p>
+                            <p class="stat">Attack</p>
+                        </div>
+                        <div class="cardDefense">
+                            <p class="points"><%- card.hp %></p>
+                            <p class="stat">Defense</p>
+                        </div>
+                        <div class="cardCost">
+                            <p class="points"><%- card.cost %></p>
+                            <p class="stat">Cost</p>
+                        </div>
+                    </div>
+                </div>
+        <% }) %>
+        </div>
+    </div>
+</div>
